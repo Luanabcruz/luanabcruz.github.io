@@ -1,9 +1,11 @@
 # luanabcruz.github.io
 
 ## Descrição do Projeto
-Github pages com material de aula como slides e exercícios para disciplinas de Introdução à Computação e Introdução à Programação
+Github pages com material de aula como slides e exercícios para disciplinas de Introdução à Computação e Introdução à Programação.
 
-## Conteúdo 
+Acesso: [luanabcruz.github.io](https://luanabcruz.github.io)
+
+Conteúdo 
 =================
 
    * Publicação
