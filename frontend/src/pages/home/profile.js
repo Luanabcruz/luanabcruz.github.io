@@ -13,13 +13,13 @@ const Profile = () => {
                     <span style={{ fontWeight: '500', fontSize: '1.2em' }}>Universidade Federal do Cariri (UFCA)</span>
                     <span>Departamento de Computação - Bloco A, Sala 05</span>
                     <div className="profile-contact pt-3"  style={{ display: 'flex', alignItems: 'stretch', justifyContent:'space-around', maxWidth:'120px'}}>
-                        <a style={{ textDecoration: 'none' }} href="mailto: luana.batista@ufca.edu.br" target='_blank'>
+                        <a style={{ textDecoration: 'none' }} href="mailto: luana.batista@ufca.edu.br" target='_blank'  rel="noreferrer">
                             <Envelope  className="ml-4"  color="black" size={24}/>
                         </a>
-                        <a style={{ textDecoration: 'none' }} href="https://www.linkedin.com/in/luana-batista-623159207" target='_blank'>
+                        <a style={{ textDecoration: 'none' }} href="https://www.linkedin.com/in/luana-batista-623159207" target='_blank'  rel="noreferrer">
                             <Linkedin  className="ml-4"  color="royalblue"  size={24}/>
                         </a>
-                        <a style={{ textDecoration: 'none' }} href="https://scholar.google.com.br/citations?user=JIURebIAAAAJ&hl=pt-BR" target='_blank'>
+                        <a style={{ textDecoration: 'none' }} href="https://scholar.google.com.br/citations?user=JIURebIAAAAJ&hl=pt-BR" target='_blank'  rel="noreferrer">
                             <Google  className="ml-4"  color="red"  size={24} />
                         </a>
                     </div>

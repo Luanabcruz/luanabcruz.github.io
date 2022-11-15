@@ -1,6 +1,9 @@
 import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
+
 import { Link } from "react-router-dom";
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Nav from 'react-bootstrap/Nav';
 
 const Header = ({ title }) => {
 
@@ -18,6 +21,18 @@ const Header = ({ title }) => {
                     />{' '}
                     {title}
                 </Navbar.Brand>
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto">
+                        <NavDropdown title="Ensino" id="nav-education">
+                            <NavDropdown.Item as={Link} to="/ensino/introducao-computacao">
+                                Introdução à Ciência da Computação
+                            </NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/ensino/introducao-programacao">
+                                Introdução à Programação
+                            </NavDropdown.Item>
+                        </NavDropdown>
+                    </Nav>
+                </Navbar.Collapse>
             </Container>
         </Navbar>);
 };

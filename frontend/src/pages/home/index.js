@@ -19,7 +19,7 @@ const Home = () => {
 
     return (
         <>
-            <div className="pt-5" style={{display: 'flex', alignItems: 'stretch'}}>
+            <div style={{display: 'flex', alignItems: 'stretch'}}>
                 <Profile />            
             </div>
             <div className="pt-3">

@@ -10,9 +10,10 @@ const App = () => {
     <div className="App">
       <Header title={'Profa. Dra. Luana Batista'} />
       <Container>
+        <div className="pb-5"></div>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="education" element={<Education />} />
+          <Route path="ensino/:slug" element={<Education />} />
         </Routes>
       </Container>
     </div>
