@@ -3,6 +3,7 @@ import pageApi from '../../services/page';
 import Education from "./education";
 import About from './about';
 import FieldsOfInterest from './fields_interest';
+import Profile from './profile';
 
 const Home = () => {
     const [home, setHome] = useState({});
@@ -18,7 +19,10 @@ const Home = () => {
 
     return (
         <>
-            <div className="pt-5">
+            <div className="pt-5" style={{display: 'flex', alignItems: 'stretch'}}>
+                <Profile />            
+            </div>
+            <div className="pt-3">
                 <About about={about} />
             </div>
             <div className="pt-3">
@@ -27,6 +31,7 @@ const Home = () => {
             <div className="pt-3">
                 <Education disciplines={disciplines} />
             </div>
+            <div className="pb-5" />
         </>
     );
 }
