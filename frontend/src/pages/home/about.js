@@ -11,7 +11,7 @@ const About = ({ about }) => {
                     </ul>
                 )
             }
-            <p>Mais informações: <a href='http://lattes.cnpq.br/2392497569843711' target='_blank'>CV Lattes</a></p>
+            <p>Mais informações: <a href='http://lattes.cnpq.br/2392497569843711' target='_blank' rel="noreferrer">CV Lattes</a></p>
         </>
     );
 }
