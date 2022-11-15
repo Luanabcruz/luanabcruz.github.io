@@ -9,27 +9,62 @@
     "subjects": [
         {
             "name": "Introdução",
-            "slide_link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/01%20-%20Introdu%C3%A7%C3%A3o.pdf"
+            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/01%20-%20Introdu%C3%A7%C3%A3o.pdf"
         },
         {
             "name": "Introdução à Programação",
-            "slide_link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/02%20-%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o.pdf"
+            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/02%20-%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o.pdf"
         },
         {
             "name": "Introdução à C",
-            "slide_link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/03%20-%20Introdu%C3%A7%C3%A3o%20a%20C.pdf"
+            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/03%20-%20Introdu%C3%A7%C3%A3o%20a%20C.pdf"
         },
         {
             "name": "Vetores",
-            "slide_link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/04%20-%20Vetores.pdf"
+            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/04%20-%20Vetores.pdf"
         },
         {
             "name": "Matrizes",
-            "slide_link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/05%20-%20Matrizes.pdf"
+            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/05%20-%20Matrizes.pdf"
         },
         {
             "name": "Funções",
-            "slide_link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/06%20-%20Fun%C3%A7%C3%B5es.pdf"
+            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/06%20-%20Fun%C3%A7%C3%B5es.pdf"
+        }
+    ],
+
+    "exercises": [
+        {
+            "name": "Descrição narrativa",
+            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-programacao/atividades/01%20Atividade%20-%20Descri%C3%A7%C3%A3o%20narrativa.pdf"
+        },
+        {
+            "name": "Fluxograma.pdf",
+            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-programacao/atividades/02%20Atividade%20-%20Fluxograma.pdf"
+        },
+        {
+            "name": "Pseudocódigo, portugol",
+            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-programacao/atividades/03%20Atividade%20-%20Pseudoc%C3%B3digo%2C%20portugol.pdf"
+        },
+        {
+            "name": "Linguagem C",
+            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-programacao/atividades/04%20Atividade%20-%20C.pdf"
+        },
+        {
+            "name": "Vetores",
+            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-programacao/atividades/05%20Atividade%20-%20Vetores.pdf"
+        },
+        {
+            "name": "String",
+            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-programacao/atividades/06%20Atividade%20-%20String.pdf"
+        },
+        {
+            "name": "Matrizes",
+            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-programacao/atividades/07%20Atividade%20-%20Matrizes.pdf"
+        },
+        {
+            "name": "Funções",
+            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-programacao/atividades/08%20Atividade%20-%20Fun%C3%A7%C3%B5es.pdf"
         }
     ],
 
