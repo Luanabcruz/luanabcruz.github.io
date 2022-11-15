@@ -6,6 +6,7 @@ const api = axios.create({
 
 const pageApi = {
     home: () => api.get('home.json'),
+    education: (slug) => api.get(`education/${slug}.json`)
 }
 
 export default pageApi;

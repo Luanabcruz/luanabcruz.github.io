@@ -4,8 +4,10 @@ import Tabs from 'react-bootstrap/Tabs';
 import EducationMaterial from './parts/education_material';
 import EducationPlan from './parts/education_plan';
 
-const EducationTabs = ()=>  {
+const EducationTabs = ({ data }) => {
   const [key, setKey] = useState('plano-ensino');
+
+  const { education_plan } = data || {};
 
   return (
     <Tabs
@@ -15,16 +17,16 @@ const EducationTabs = ()=>  {
       className="mb-3"
     >
       <Tab eventKey="plano-ensino" title="Plano de Ensino">
-        <EducationPlan />
+        <EducationPlan data={education_plan} />
       </Tab>
       <Tab eventKey="slides-aulas" title="Slides/Aulas">
         <EducationMaterial />
       </Tab>
       <Tab eventKey="exercicios" title="Exercícios" disabled >
-        
+
       </Tab>
       <Tab eventKey="bibliografia" title="Bibliografia" disabled>
-        
+
       </Tab>
     </Tabs>
   );
