@@ -3,9 +3,9 @@ const ListWithTitle = ({ title, list }) => {
         !!list && (
             <div className="pt-3">
                 <h4>{title}</h4>
-                <ul>
-                    {list.map(item => (<li>{item?.key} - {item?.value}</li>))}
-                </ul>
+                
+                    {list.map(item => (<p>{item}</p>))}
+                
             </div>
         )
     );

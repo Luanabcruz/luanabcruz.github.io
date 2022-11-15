@@ -10,7 +10,7 @@ const EducationPlan = ({data}) => {
     <Container>
       <ContentWithTitle title="Ementa" content={program}/>
       <ContentWithTitle title="Objetivos" content={goals}/>
-      <ContentWithTitle title="Procedimento de Ensino" content={procedure} />
+      <ContentWithTitle title="Procedimento de Ensino" content={procedure} />      
       <div className='pb-5'></div>
     </Container>
   );

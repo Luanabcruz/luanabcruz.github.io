@@ -31,5 +31,14 @@
             "name": "Funções",
             "slide_link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/06%20-%20Fun%C3%A7%C3%B5es.pdf"
         }
+    ],
+
+    "references": [
+        "PERKOVIC, L., Introdução a Computação usando Python. LTC, São Paulo, 2016. JUNIOR, D.P. et al, Algoritmos e Programação de Computadores. Campus, São Paulo, 2012.",
+        "FORBELLONE, A.L.V., Lógica de Programação. A Construção de Algoritmos e Estrutura de Dados, Pearson, São Paulo, 2005.",
+        "SCHILDT, Herbert, C Completo e Total. Makron, 3a edição revista e atualizada, 1997.",
+        "SZWARCHFITER, Jayme, Estruturas de Dados e seus Algoritmos. 3ª Edição. LTC, 2010.",
+        "CORMEN, Thomas H, Algoritmos – Teoria e Prática. 3ª Edição. Campus, 2012.",
+        "CELES, Waldemar. et al, Introdução a Estrutura de Dados com Técnicas de Programação em C. 4ª Edição. Campus, 2004."
     ]
 }
