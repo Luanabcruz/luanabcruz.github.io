@@ -1,7 +1,8 @@
 import Container from 'react-bootstrap/Container';
 import React, { useState } from 'react';
 import ContentWithTitle from '../../../components/ContentWithTitle';
-import ListWithTitle from '../../../components/ListWithTitle';
+
+import ContentWorkload from './content_workload';
 
 const EducationPlan = ({data}) => {
 
@@ -11,8 +12,9 @@ const EducationPlan = ({data}) => {
     <Container>
       <ContentWithTitle title="Ementa" content={program}/>
       <ContentWithTitle title="Objetivos" content={goals}/>
-      <ListWithTitle title="Conteúdo Programático" list={content_workload}/>
+      <ContentWorkload data={content_workload}/>
       <ContentWithTitle title="Procedimento de Ensino" content={procedure} />
+      <div className='pb-5'></div>
     </Container>
   );
 }

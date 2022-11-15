@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import pageApi from '../../services/page';
 import Education from "./education";
 import About from './about';
@@ -8,12 +8,15 @@ import Profile from './profile';
 const Home = () => {
     const [home, setHome] = useState({});
 
-    pageApi
+    useEffect(() => {
+        pageApi
         .home()
         .then((response) => setHome(response.data))
         .catch((err) => {
             console.error("ops! ocorreu um erro" + err);
         });
+    }, [])
+    
 
     const { about, fields_interest, disciplines } = home;
 

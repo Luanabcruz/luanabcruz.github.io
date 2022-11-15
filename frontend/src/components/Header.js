@@ -24,12 +24,13 @@ const Header = ({ title }) => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <NavDropdown title="Ensino" id="nav-education">
-                            <NavDropdown.Item as={Link} to="/ensino/introducao-computacao">
-                                Introdução à Ciência da Computação
-                            </NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/ensino/introducao-programacao">
                                 Introdução à Programação
                             </NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/ensino/introducao-computacao">
+                                Introdução à Ciência da Computação
+                            </NavDropdown.Item>
+
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
