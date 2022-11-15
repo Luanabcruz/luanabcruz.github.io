@@ -1,3 +1,18 @@
 {
-    "about": "Olá, mundo!"
+    "about": [
+        "Professora adjunta do Departamento de Computação da Universidade Federal do Cariri (UFCA)",
+        "Doutorado, Ciência da Computação, Universidade Federal do Maranhão/Piauí (UFMA/UFPI)",
+        "Mestrado, Engenharia Elétrica, Universidade Federal do Maranhão (UFMA)",
+        "Bacharelado, Sistemas de Informação, Universidade Federal do Piauí (UFPI)"
+    ],
+    "fields_interest": [
+        "Visão Computacional",
+        "Processamento de Imagens",
+        "Imagens Médicas",
+        "Reconhecimento de Padrões"
+    ],
+    "disciplines": [
+        "Introdução à Computação",
+        "Introdução à Programação"
+    ]
 }

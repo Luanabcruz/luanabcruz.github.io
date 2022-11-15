@@ -8,7 +8,7 @@ import Home from './pages/home';
 const App = () => {
   return (
     <div className="App">
-      <Header title={'Luana Batista'} />
+      <Header title={'Profa. Dra. Luana Batista'} />
       <Container>
         <Routes>
           <Route path="/" element={<Home />} />

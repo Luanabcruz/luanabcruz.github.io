@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import pageApi from '../../services/page';
+import Education from "./education";
+import About from './about';
+import FieldsOfInterest from './fields_interest';
 
 const Home = () => {
     const [home, setHome] = useState({});
@@ -9,13 +12,22 @@ const Home = () => {
         .then((response) => setHome(response.data))
         .catch((err) => {
             console.error("ops! ocorreu um erro" + err);
-    });
+        });
+
+    const { about, fields_interest, disciplines } = home;
 
     return (
-        <div>
-            <h1>This is the home page</h1>
-            <p>About: {home?.about}</p>
-        </div>
+        <>
+            <div className="pt-5">
+                <About about={about} />
+            </div>
+            <div className="pt-3">
+                <FieldsOfInterest fields={fields_interest} />
+            </div>
+            <div className="pt-3">
+                <Education disciplines={disciplines} />
+            </div>
+        </>
     );
 }
 
