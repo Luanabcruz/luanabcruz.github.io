@@ -12,7 +12,7 @@ const Profile = () => {
                 <div className="profile-details" style={{ display: 'flex', alignItems: 'stretch', flexDirection: 'column' }}>
                     <span style={{ fontWeight: '500', fontSize: '1.2em' }}>Universidade Federal do Cariri (UFCA)</span>
                     <span>Departamento de Computação - Bloco A, Sala 05</span>
-                    <div className="profile-contact pt-3"  style={{ display: 'flex', alignItems: 'stretch', justifyContent:'space-around'}}>
+                    <div className="profile-contact pt-3"  style={{ display: 'flex', alignItems: 'stretch', justifyContent:'space-around', maxWidth:'120px'}}>
                         <a style={{ textDecoration: 'none' }} href="mailto: luana.batista@ufca.edu.br" target='_blank'>
                             <Envelope  className="ml-4"  color="black" size={24}/>
                         </a>
