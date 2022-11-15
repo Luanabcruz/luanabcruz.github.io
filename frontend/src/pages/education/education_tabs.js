@@ -7,7 +7,7 @@ import EducationPlan from './parts/education_plan';
 const EducationTabs = ({ data }) => {
   const [key, setKey] = useState('plano-ensino');
 
-  const { education_plan } = data || {};
+  const { education_plan, subjects } = data || {};
 
   return (
     <Tabs
@@ -20,7 +20,7 @@ const EducationTabs = ({ data }) => {
         <EducationPlan data={education_plan} />
       </Tab>
       <Tab eventKey="slides-aulas" title="Slides/Aulas">
-        <EducationMaterial />
+        <EducationMaterial subjects={subjects} />
       </Tab>
       <Tab eventKey="exercicios" title="Exercícios" disabled >
 

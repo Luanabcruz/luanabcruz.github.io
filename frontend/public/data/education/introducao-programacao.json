@@ -5,5 +5,31 @@
         "program": "Funcionamento de um computador digital; conceitos básicos de algoritmos; variáveis; expressões; identificadores; entrada de dados; operadores; comando if-else; comando  switch; expressão condicional; laços for, while, do-while; funções; vetores e matrizes; caracteres; strings; ponteiros e funções; operações com ponteiros; ponteiros e vetores;  ponteiros e strings; alocação dinâmica; estruturas; estruturas e funções; arquivos.",
         "goals": "Preparar o aluno para utilizar ferramentas computacionais nas atividades do curso, consolidando uma formação que será útil na sua vida profissional. O aluno aprenderá a desenvolver programas utilizando técnicas básicas de programação estruturada e o conceito de tipos de dados. Concomitantemente se familiarizará com a utilização de ferramentas necessárias para execução dessas tarefas. O curso também oferece um primeiro contato com o uso de computadores para desenvolvimento de programas.",
         "procedure": "Os conceitos relativos à introdução à programação serão apresentados com aulas expositivas, as práticas serão cobradas em seminários e atividades práticas"
-    }
+    },
+    "subjects": [
+        {
+            "name": "Introdução",
+            "slide_link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/01%20-%20Introdu%C3%A7%C3%A3o.pdf"
+        },
+        {
+            "name": "Introdução à Programação",
+            "slide_link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/02%20-%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o.pdf"
+        },
+        {
+            "name": "Introdução à C",
+            "slide_link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/03%20-%20Introdu%C3%A7%C3%A3o%20a%20C.pdf"
+        },
+        {
+            "name": "Vetores",
+            "slide_link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/04%20-%20Vetores.pdf"
+        },
+        {
+            "name": "Matrizes",
+            "slide_link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/05%20-%20Matrizes.pdf"
+        },
+        {
+            "name": "Funções",
+            "slide_link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/06%20-%20Fun%C3%A7%C3%B5es.pdf"
+        }
+    ]
 }
