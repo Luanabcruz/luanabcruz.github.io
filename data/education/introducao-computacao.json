@@ -2,9 +2,9 @@
     "name": "Introdução à Ciência da Computação",
     "slug": "introducao-computacao",
     "education_plan": {
-        "program": "",
-        "goals": "",
-        "procedure": "",
+        "program": "Visão Geral do Curso de Ciência da Computação. Sistemas de Computação, Aplicações do Computador e Evolução Histórica. A Informação e sua Representação.",
+        "goals": "Despertar habilidades e encaminhar o aluno do primeiro ano do curso de Ciência da Computação, numa destacada etapa de sua vida, ou seja, a sua profissionalização. Apresentar as ferramentas, informações e exemplos que serão úteis no decorrer do curso de graduação e até mesmo durante as atividades profissionais após o curso, abrindo um horizonte de informações para sua vida acadêmica.",
+        "procedure": "Os conceitos relativos à ciência da computação serão apresentados com aulas expositivas, as práticas serão cobradas em seminários e atividades práticas.",
         "evaluation": {
             "text": "O sistema de avaliação está de acordo com a resolução nº 23/Consup, de 19 de julho de 2018. O aluno que apresentar a média das avaliações progressivas igual ou superior a 7,0 (sete vírgula zero) na disciplina ou disciplina concentrada e frequência mínima de 75% da carga horária total da disciplina, será dispensado da avaliação final e sua média final será igual à média das avaliações progressivas. O aluno que apresentar a média das avaliações progressivas das disciplinas ou disciplinas concentradas inferior a 3,0 (três vírgula zero) ou não tiver frequência mínima será reprovado. O aluno que apresentar a média das avaliações progressivas igual ou superior a 3,0 (três vírgula zero) e inferior a 7,0 (sete vírgula zero) nas disciplinas ou disciplinas concentradas, será obrigatoriamente submetido à avaliação final. Caso o aluno tenha de ser submetido a avaliação final, será aprovado se obtiver média final igual ou superior a 5,0 (cinco vírgula zero), calculada pela fórmula abaixo.",
             "legend": "Onde: <b>MF</b> = Média Final, <b>NAF</b> = Nota de Avaliação Final, <b>NAP</b> = Nota de Avaliação Progressiva, <b>n</b> = Número de Avaliações Progressivas."
@@ -12,19 +12,35 @@
     },
     "subjects": [
         {
-            "name": "Assunto 1",
-            "link": ""
+            "name": "Introdução",
+            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-ciencia-computacao/slides/01%20-%20Introdu%C3%A7%C3%A3o.pdf"
+        },
+        {
+            "name": "Conceitos básicos da informática",
+            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-ciencia-computacao/slides/02%20-%20Conceitos%20b%C3%A1sicos%20da%20inform%C3%A1tica.pdf"
+        },
+        {
+            "name": "Histórico e evolução dos computadores",
+            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-ciencia-computacao/slides/03%20-%20Hist%C3%B3rico%20e%20evolu%C3%A7%C3%A3o%20dos%20computadores.pdf"
+        },
+        {
+            "name": "Sistemas numéricos e representação de informações",
+            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-ciencia-computacao/slides/04%20-%20Sistemas%20num%C3%A9ricos%20e%20representa%C3%A7%C3%A3o%20de%20informa%C3%A7%C3%B5es.pdf"
+        },
+        {
+            "name": "Operações aritméticas com diversas bases",
+            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-ciencia-computacao/slides/05%20-%20Opera%C3%A7%C3%B5es%20aritm%C3%A9ticas%20com%20diversas%20bases.pdf"
         }
     ],
-
     "exercises": [
         {
-            "name": "Atividade 1",
-            "link": ""
+            "name": "",
+            "link": "#"
         }
     ],
     "references": [
-        "Uma referencia aqui"
-        
+        "MOKARZEL e SOMA, <b>Introdução a Ciência da Computação.</b> Campus, São Paulo, 2008.",
+        "GUIMARÃES e LAGES, <b>Introdução a Ciência da Computação.</b> LTC, São Paulo, 1996.",
+        "BROOKSHEAR, J.G., <b>Ciência da Computação. Uma Visão Abrangente.</b> Bookman, 11a Edição, São Paulo, 2013."
     ]
 }
