@@ -69,11 +69,12 @@
     ],
 
     "references": [
-        "PERKOVIC, L., Introdução a Computação usando Python. LTC, São Paulo, 2016. JUNIOR, D.P. et al, Algoritmos e Programação de Computadores. Campus, São Paulo, 2012.",
-        "FORBELLONE, A.L.V., Lógica de Programação. A Construção de Algoritmos e Estrutura de Dados, Pearson, São Paulo, 2005.",
-        "SCHILDT, Herbert, C Completo e Total. Makron, 3a edição revista e atualizada, 1997.",
-        "SZWARCHFITER, Jayme, Estruturas de Dados e seus Algoritmos. 3ª Edição. LTC, 2010.",
-        "CORMEN, Thomas H, Algoritmos – Teoria e Prática. 3ª Edição. Campus, 2012.",
-        "CELES, Waldemar. et al, Introdução a Estrutura de Dados com Técnicas de Programação em C. 4ª Edição. Campus, 2004."
+        "PERKOVIC, L., <b>Introdução a Computação usando Python.</b> LTC, São Paulo, 2016.",
+        "JUNIOR, D.P. et al, <b>Algoritmos e Programação de Computadores.</b> Campus, São Paulo, 2012.",
+        "FORBELLONE, A.L.V., <b>Lógica de Programação.</b> A Construção de Algoritmos e Estrutura de Dados, Pearson, São Paulo, 2005.",
+        "SCHILDT, Herbert, <b>C Completo e Total.</b> Makron, 3a edição revista e atualizada, 1997.",
+        "SZWARCHFITER, Jayme, <b>Estruturas de Dados e seus Algoritmos.</b> 3ª Edição. LTC, 2010.",
+        "CORMEN, Thomas H, <b>Algoritmos – Teoria e Prática.</b> 3ª Edição. Campus, 2012.",
+        "CELES, Waldemar. et al, <b>Introdução a Estrutura de Dados com Técnicas de Programação em C.</b> 4ª Edição. Campus, 2004."
     ]
 }
