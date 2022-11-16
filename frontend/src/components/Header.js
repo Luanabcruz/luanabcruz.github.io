@@ -28,9 +28,9 @@ const Header = ({ title }) => {
                             <NavDropdown.Item as={Link} to="/ensino/introducao-programacao">
                                 Introdução à Programação
                             </NavDropdown.Item>
-                            {/* <NavDropdown.Item as={Link} to="/ensino/introducao-computacao">
+                            <NavDropdown.Item as={Link} to="/ensino/introducao-computacao">
                                 Introdução à Ciência da Computação
-                            </NavDropdown.Item> */}
+                            </NavDropdown.Item>
 
                         </NavDropdown>
                     </Nav>

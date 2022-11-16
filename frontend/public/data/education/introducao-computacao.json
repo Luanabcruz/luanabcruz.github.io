@@ -1,0 +1,30 @@
+{
+    "name": "Introdução à Ciência da Computação",
+    "slug": "introducao-computacao",
+    "education_plan": {
+        "program": "",
+        "goals": "",
+        "procedure": "",
+        "evaluation": {
+            "text": "O sistema de avaliação está de acordo com a resolução nº 23/Consup, de 19 de julho de 2018. O aluno que apresentar a média das avaliações progressivas igual ou superior a 7,0 (sete vírgula zero) na disciplina ou disciplina concentrada e frequência mínima de 75% da carga horária total da disciplina, será dispensado da avaliação final e sua média final será igual à média das avaliações progressivas. O aluno que apresentar a média das avaliações progressivas das disciplinas ou disciplinas concentradas inferior a 3,0 (três vírgula zero) ou não tiver frequência mínima será reprovado. O aluno que apresentar a média das avaliações progressivas igual ou superior a 3,0 (três vírgula zero) e inferior a 7,0 (sete vírgula zero) nas disciplinas ou disciplinas concentradas, será obrigatoriamente submetido à avaliação final. Caso o aluno tenha de ser submetido a avaliação final, será aprovado se obtiver média final igual ou superior a 5,0 (cinco vírgula zero), calculada pela fórmula abaixo.",
+            "legend": "Onde: <b>MF</b> = Média Final, <b>NAF</b> = Nota de Avaliação Final, <b>NAP</b> = Nota de Avaliação Progressiva, <b>n</b> = Número de Avaliações Progressivas."
+        }
+    },
+    "subjects": [
+        {
+            "name": "Assunto 1",
+            "link": ""
+        }
+    ],
+
+    "exercises": [
+        {
+            "name": "Atividade 1",
+            "link": ""
+        }
+    ],
+    "references": [
+        "Uma referencia aqui"
+        
+    ]
+}
