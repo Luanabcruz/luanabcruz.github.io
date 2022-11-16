@@ -2,78 +2,29 @@
     "name": "Introdução à Ciência da Computação",
     "slug": "introducao-computacao",
     "education_plan": {
-        "program": "Funcionamento de um computador digital; conceitos básicos de algoritmos; variáveis; expressões; identificadores; entrada de dados; operadores; comando if-else; comando  switch; expressão condicional; laços for, while, do-while; funções; vetores e matrizes; caracteres; strings; ponteiros e funções; operações com ponteiros; ponteiros e vetores;  ponteiros e strings; alocação dinâmica; estruturas; estruturas e funções; arquivos.",
-        "goals": "Preparar o aluno para utilizar ferramentas computacionais nas atividades do curso, consolidando uma formação que será útil na sua vida profissional. O aluno aprenderá a desenvolver programas utilizando técnicas básicas de programação estruturada e o conceito de tipos de dados. Concomitantemente se familiarizará com a utilização de ferramentas necessárias para execução dessas tarefas. O curso também oferece um primeiro contato com o uso de computadores para desenvolvimento de programas.",
-        "procedure": "Os conceitos relativos à introdução à programação serão apresentados com aulas expositivas, as práticas serão cobradas em seminários e atividades práticas"
+        "program": "",
+        "goals": "",
+        "procedure": "",
+        "evaluation": {
+            "text": "O sistema de avaliação está de acordo com a resolução nº 23/Consup, de 19 de julho de 2018. O aluno que apresentar a média das avaliações progressivas igual ou superior a 7,0 (sete vírgula zero) na disciplina ou disciplina concentrada e frequência mínima de 75% da carga horária total da disciplina, será dispensado da avaliação final e sua média final será igual à média das avaliações progressivas. O aluno que apresentar a média das avaliações progressivas das disciplinas ou disciplinas concentradas inferior a 3,0 (três vírgula zero) ou não tiver frequência mínima será reprovado. O aluno que apresentar a média das avaliações progressivas igual ou superior a 3,0 (três vírgula zero) e inferior a 7,0 (sete vírgula zero) nas disciplinas ou disciplinas concentradas, será obrigatoriamente submetido à avaliação final. Caso o aluno tenha de ser submetido a avaliação final, será aprovado se obtiver média final igual ou superior a 5,0 (cinco vírgula zero), calculada pela fórmula abaixo.",
+            "legend": "Onde: <b>MF</b> = Média Final, <b>NAF</b> = Nota de Avaliação Final, <b>NAP</b> = Nota de Avaliação Progressiva, <b>n</b> = Número de Avaliações Progressivas."
+        }
     },
     "subjects": [
         {
-            "name": "Introdução",
-            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/01%20-%20Introdu%C3%A7%C3%A3o.pdf"
-        },
-        {
-            "name": "Introdução à Programação",
-            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/02%20-%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Programa%C3%A7%C3%A3o.pdf"
-        },
-        {
-            "name": "Introdução à C",
-            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/03%20-%20Introdu%C3%A7%C3%A3o%20a%20C.pdf"
-        },
-        {
-            "name": "Vetores",
-            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/04%20-%20Vetores.pdf"
-        },
-        {
-            "name": "Matrizes",
-            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/05%20-%20Matrizes.pdf"
-        },
-        {
-            "name": "Funções",
-            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/9f9a787879d5f1557823bec7ae4828709267c41d/introducao-programacao/06%20-%20Fun%C3%A7%C3%B5es.pdf"
+            "name": "Assunto 1",
+            "link": ""
         }
     ],
 
     "exercises": [
         {
-            "name": "Descrição narrativa",
-            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-programacao/atividades/01%20Atividade%20-%20Descri%C3%A7%C3%A3o%20narrativa.pdf"
-        },
-        {
-            "name": "Fluxograma",
-            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-programacao/atividades/02%20Atividade%20-%20Fluxograma.pdf"
-        },
-        {
-            "name": "Pseudocódigo, portugol",
-            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-programacao/atividades/03%20Atividade%20-%20Pseudoc%C3%B3digo%2C%20portugol.pdf"
-        },
-        {
-            "name": "Linguagem C",
-            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-programacao/atividades/04%20Atividade%20-%20C.pdf"
-        },
-        {
-            "name": "Vetores",
-            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-programacao/atividades/05%20Atividade%20-%20Vetores.pdf"
-        },
-        {
-            "name": "String",
-            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-programacao/atividades/06%20Atividade%20-%20String.pdf"
-        },
-        {
-            "name": "Matrizes",
-            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-programacao/atividades/07%20Atividade%20-%20Matrizes.pdf"
-        },
-        {
-            "name": "Funções",
-            "link": "https://github.com/Luanabcruz/ensino-computacao-UFCA/raw/main/introducao-programacao/atividades/08%20Atividade%20-%20Fun%C3%A7%C3%B5es.pdf"
+            "name": "Atividade 1",
+            "link": ""
         }
     ],
     "references": [
-        "PERKOVIC, L., <b>Introdução a Computação usando Python.</b> LTC, São Paulo, 2016.",
-        "JUNIOR, D.P. et al, <b>Algoritmos e Programação de Computadores.</b> Campus, São Paulo, 2012.",
-        "FORBELLONE, A.L.V., <b>Lógica de Programação.</b> A Construção de Algoritmos e Estrutura de Dados, Pearson, São Paulo, 2005.",
-        "SCHILDT, Herbert, <b>C Completo e Total.</b> Makron, 3a edição revista e atualizada, 1997.",
-        "SZWARCHFITER, Jayme, <b>Estruturas de Dados e seus Algoritmos.</b> 3ª Edição. LTC, 2010.",
-        "CORMEN, Thomas H, <b>Algoritmos – Teoria e Prática.</b> 3ª Edição. Campus, 2012.",
-        "CELES, Waldemar. et al, <b>Introdução a Estrutura de Dados com Técnicas de Programação em C.</b> 4ª Edição. Campus, 2004."
+        "Uma referencia aqui"
+        
     ]
 }
