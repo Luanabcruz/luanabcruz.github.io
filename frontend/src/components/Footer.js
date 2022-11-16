@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer id="footer" className="footer-top" style={{marginTop:'auto'}}>
             <div className="footer-top">
-                <div className="container">
+                <div className="container" style={{marginBottom: '50px'}}>
                     <div className="footer-info">
                         <address>
                             <strong>Departamento de Computação&nbsp;|&nbsp; Universidade Federal do Cariri</strong><br />

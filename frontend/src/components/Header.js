@@ -10,7 +10,7 @@ const Header = ({ title }) => {
     const imgSrc = `${process.env.PUBLIC_URL}brand_ufca_header.png`;
 
     return (
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="dark" variant="dark" expand="lg">
             <Container>
                 <Navbar.Brand as={Link} to="/">
                     <img
@@ -21,6 +21,7 @@ const Header = ({ title }) => {
                     />{' '}
                     {title}
                 </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <NavDropdown title="Ensino" id="nav-education">
