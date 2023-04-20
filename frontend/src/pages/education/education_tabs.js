@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import ListWithTitle from '../../components/ListWithTitle';
-import EducationPlan from './parts/education_plan';
+import RenderHtml from './parts/render_html';
 import ListFiles from './parts/list_files';
 
 const EducationTabs = ({ data }) => {
   const [key, setKey] = useState('plano-ensino');
 
-  const { education_plan, subjects, references, exercises } = data || {};
+  const { educationPlan, bibliographicReferences,subjects, references, exercises } = data || {};
 
   return (
     <Tabs
@@ -18,7 +18,7 @@ const EducationTabs = ({ data }) => {
       className="mb-3"
     >
       <Tab eventKey="plano-ensino" title="Plano de Ensino">
-        <EducationPlan data={education_plan} />
+        <RenderHtml data={educationPlan} />
       </Tab>
       <Tab eventKey="slides-aulas" title="Slides/Aulas">
         <ListFiles title='Slides/Aulas' prefix='Aula' files={subjects} />
@@ -27,7 +27,7 @@ const EducationTabs = ({ data }) => {
       <ListFiles title='Atividades' prefix='Atividade' files={exercises} />
       </Tab>
       <Tab eventKey="bibliografia" title="Bibliografia" >
-        <ListWithTitle title="Bibliografia" list={references} />
+      <RenderHtml data={bibliographicReferences} />
       </Tab>
     </Tabs>
   );
