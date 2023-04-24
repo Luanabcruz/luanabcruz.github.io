@@ -8,7 +8,7 @@ import ListFiles from './parts/list_files';
 const EducationTabs = ({ data }) => {
   const [key, setKey] = useState('plano-ensino');
 
-  const { educationPlan, bibliographicReferences,subjects, references, exercises } = data || {};
+  const { education_plan, notes, references, lessons } = data || {};
 
   return (
     <Tabs
@@ -18,16 +18,16 @@ const EducationTabs = ({ data }) => {
       className="mb-3"
     >
       <Tab eventKey="plano-ensino" title="Plano de Ensino">
-        <RenderHtml data={educationPlan} />
+        <RenderHtml data={education_plan} />
       </Tab>
       <Tab eventKey="slides-aulas" title="Slides/Aulas">
-        <ListFiles title='Slides/Aulas' prefix='Aula' files={subjects} />
+        <ListFiles title='Slides/Aulas' prefix='Aula' files={notes} />
       </Tab>
       <Tab eventKey="atividades" title="Atividades" >
-      <ListFiles title='Atividades' prefix='Atividade' files={exercises} />
+      <ListFiles title='Atividades' prefix='Atividade' files={lessons} />
       </Tab>
       <Tab eventKey="bibliografia" title="Bibliografia" >
-      <RenderHtml data={bibliographicReferences} />
+        <RenderHtml data={references} />
       </Tab>
     </Tabs>
   );
