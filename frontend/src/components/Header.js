@@ -7,7 +7,7 @@ import Nav from 'react-bootstrap/Nav';
 
 const Header = ({ title }) => {
 
-    const imgSrc = `${process.env.PUBLIC_URL}brand_ufca_header.png`;
+    const imgSrc = `/brand_ufca_header.png`;
 
     return (
         <Navbar bg="dark" variant="dark" expand="lg">

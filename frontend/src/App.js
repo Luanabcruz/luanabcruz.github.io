@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Education from './pages/education';
 import Home from './pages/home';
+import PageNotFound from './pages/page_not_found';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Container>
         <div className="pb-5"></div>
         <Routes>
+          <Route path='*' element={<PageNotFound />} />
           <Route path="/" element={<Home />} />
           <Route path="ensino/:slug" element={<Education />} />
         </Routes>
