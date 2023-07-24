@@ -14,7 +14,7 @@ const ListFiles = ({ title, prefix , files }) => {
             {
               files.map((item, index) => (
                 <li>
-                  <FilePdfFill color="red" /><a href={item?.link} target="_blank" > {prefix} {index+1}</a>  {!!item?.name ? '-' : ''} <span style={{fontWeight:'500'}}>{item?.name} </span>
+                  <FilePdfFill color="red" /><a href={item?.url} target="_blank" > {prefix} {index+1}</a>  {!!item?.name ? '-' : ''} <span style={{fontWeight:'500'}}>{item?.name} </span>
                 </li>
               )
               )

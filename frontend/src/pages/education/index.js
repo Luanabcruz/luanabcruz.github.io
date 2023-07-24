@@ -13,7 +13,7 @@ const Education = () => {
             return;
         }
 
-        pageApi.education(slug)
+        pageApi.getDiscipline(slug)
             .then(response=> setEducationData(response.data))
             .catch((err) => {
                 setEducationData([]);
