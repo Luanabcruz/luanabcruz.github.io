@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className="container" style={{marginBottom: '50px'}}>
                     <div className="footer-info">
                         <address>
-                            <strong>Departamento de Computação&nbsp;|&nbsp; Universidade Federal do Cariri</strong><br />
+                            <strong>Centro de Ciências e Tecnologia (CCT)&nbsp;|&nbsp; Universidade Federal do Cariri</strong><br />
                             Campus Universitário Juazeiro do Norte &nbsp;|&nbsp;
                             CEP 63048-080 &nbsp;|&nbsp;Juazeiro do Norte - CE, Brasil
                         </address>
