@@ -12,14 +12,14 @@ const Header = ({ title }) => {
     const imgSrc = `/brand_ufca_header.png`;
 
     const [listDisciplines, setListDiscipline] = useState([]);
-    
+
     useEffect(() => {
         pageApi.listDisciplines().then((response) => setListDiscipline(response.data))
-        .catch((err) => {
-            console.error("ops! ocorreu um erro" + err);
-        });
-        
-  
+            .catch((err) => {
+                console.error("ops! ocorreu um erro" + err);
+            });
+
+
     }, []);
 
     return (
@@ -34,15 +34,23 @@ const Header = ({ title }) => {
                     />{' '}
                     {title}
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
+                <Navbar.Toggle />
+                <Navbar.Collapse >
+                    <Nav >
                         <NavDropdown title="Ensino" id="nav-education">
                             {listDisciplines.map(item => (
-                                 <NavDropdown.Item as={Link} to={`/ensino/${item.slug}`} key={item.slug}>
-                                 {item.name}
-                             </NavDropdown.Item>    
+                                <NavDropdown.Item as={Link} to={`/ensino/${item.slug}`} key={item.slug}>
+                                    {item.name}
+                                </NavDropdown.Item>
                             ))}
+                        </NavDropdown>
+                        <NavDropdown title="LICA" id="nav-research">
+                            <NavDropdown.Item as={Link} to={`/lica/sobre`} key={''}>
+                                Sobre
+                            </NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to={`/lica/inscricoes`} key={''}>
+                                Inscrições em aberto
+                            </NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
