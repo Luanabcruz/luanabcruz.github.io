@@ -44,12 +44,12 @@ const Header = ({ title }) => {
                                 </NavDropdown.Item>
                             ))}
                         </NavDropdown>
-                        <NavDropdown title="LICA" id="nav-research">
+                        <NavDropdown title="LICA" id="nav-lica">
                             <NavDropdown.Item as={Link} to={`/lica/sobre`} key={''}>
                                 Sobre
                             </NavDropdown.Item>
                             <NavDropdown.Item as={Link} to={`/lica/inscricoes`} key={''}>
-                                Inscrições em aberto
+                                Inscrições
                             </NavDropdown.Item>
                         </NavDropdown>
                     </Nav>

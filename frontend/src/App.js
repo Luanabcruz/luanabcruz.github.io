@@ -6,7 +6,9 @@ import Footer from "./components/Footer";
 import Education from './pages/education';
 import Home from './pages/home';
 import PageNotFound from './pages/page_not_found';
-import ResearchPage from './pages/lica/ResearchPage';
+import LicaPage from './pages/lica/LicaPage';
+import ProjectSubscriptions from './pages/lica/ProjectSubscriptions';
+import EnrollmentHome from './pages/lica/EnrollmentHome';
 
 const App = () => {
   return (
@@ -18,7 +20,9 @@ const App = () => {
           <Route path='*' element={<PageNotFound />} />
           <Route path="/" element={<Home />} />
           <Route path="ensino/:slug" element={<Education />} />
-          <Route path="lica/:slug" element={<ResearchPage  />} />
+          <Route path="lica/sobre" element={<LicaPage  />} />
+          <Route path="lica/inscricoes" element={<ProjectSubscriptions  />} />
+          <Route path="lica/inscricao/projeto-1" element={<EnrollmentHome  />} />
         </Routes>
       </Container>
       <Footer />
