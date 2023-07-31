@@ -26,6 +26,16 @@ const EnrollmentHome = () => {
         })
     }, []);
     console.log(selectionProcess)
+
+    const handleSave = async (data) => {
+        try {
+            await pageApi.submitSelectionProcesses(selectionProcess.id, data)
+        } catch (error) {
+        // Handle validation errors and other errors here
+        throw error; // Rethrow the error so it can be caught in the onSubmit function in EnrollmentForm
+      }
+    }
+
     return (
     <>
         <h4>
@@ -34,7 +44,7 @@ const EnrollmentHome = () => {
         <p> {selectionProcess?.description}. <a href ='' >Saiba mais...</a>
         </p>
         <br/>
-        <EnrollmentForm />
+        <EnrollmentForm handleSubmit = {handleSave}/>
         <br/>
         <br/>
     </>

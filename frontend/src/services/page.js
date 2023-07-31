@@ -15,7 +15,8 @@ const pageApi = {
     listDisciplines:() => apiExternal.get(`api/disciplines`),
     getDiscipline:(slug) => apiExternal.get(`api/discipline/${slug}`),
     listSelectionProcesses:() => apiExternal.get(`api/selection-processes`),
-    getSelectionProcesses: (id) => apiExternal.get(`api/selection-process/${id}`)
+    getSelectionProcesses: (id) => apiExternal.get(`api/selection-process/${id}`),
+    submitSelectionProcesses: (id, data) => apiExternal.post(`api/selection-process/${id}/submit`, data)
 }
 
 export default pageApi;

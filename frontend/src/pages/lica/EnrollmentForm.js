@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
+import ValidationError from '../../components/ValidationError';
 
-const EnrollmentForm = () => {
+const EnrollmentForm = ({handleSubmit}) => {
   const [formData, setFormData] = useState({
     fullName: '',
-    enrollmentNumber: '',
+    ufcaEnrollmentCode: '',
     email: '',
     proofOfEnrollment: null,
     projectTheme: null,
   });
+
+  const [validationErrors, setValidationErrors] = useState(null); // State to store validation errors
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -25,16 +28,29 @@ const EnrollmentForm = () => {
     });
   };
 
-  const handleSubmit = (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
-    // Aqui você pode enviar os dados para o servidor ou realizar outras ações necessárias
-    console.log(formData);
+    // handleSubmit(formData);
+
+    try {
+      // Call the handleSubmit function and handle validation errors if any
+      const response = await handleSubmit(formData);
+      console.log(response);
+    } catch (error) {
+      if (error.response && error.response.status === 400 && error.response.data.validationErrors) {
+        setValidationErrors(error.response.data.validationErrors);
+        console.log('validationErrors:', validationErrors)
+      } else {
+        // Handle other errors (e.g., server error)
+        console.error('Error submitting form:', error);
+      }
+    }
   };
 
   return (
     <div className="container">
       <h2>Formulário de Inscrição</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={onSubmit}>
         <div className="mb-3">
           <label htmlFor="fullName" className="form-label">
             Nome completo
@@ -46,23 +62,29 @@ const EnrollmentForm = () => {
             name="fullName"
             value={formData.fullName}
             onChange={handleInputChange}
-            required
           />
+          {
+            validationErrors &&
+            <ValidationError errors={validationErrors?.fullName } />
+          }
         </div>
 
         <div className="mb-3">
-          <label htmlFor="enrollmentNumber" className="form-label">
+          <label htmlFor="ufcaEnrollmentCode" className="form-label">
             Matrícula
-          </label>
+          </label>  
           <input
             type="text"
             className="form-control"
-            id="enrollmentNumber"
-            name="enrollmentNumber"
-            value={formData.enrollmentNumber}
+            id="ufcaEnrollmentCode"
+            name="ufcaEnrollmentCode"
+            value={formData.ufcaEnrollmentCode}
             onChange={handleInputChange}
-            required
           />
+          {
+            validationErrors &&
+            <ValidationError errors={validationErrors?.ufcaEnrollmentCode } />
+          }
         </div>
         <div className="mb-3">
           <label htmlFor="course" className="form-label">
@@ -74,11 +96,14 @@ const EnrollmentForm = () => {
             name="course"
             value={formData.course}
             onChange={handleInputChange}
-            required
           >
             <option value="Matemática Computacional">Matemática Computacional</option>
             <option value="Ciência da Computação">Ciência da Computação</option>
           </select>
+          {
+            validationErrors &&
+            <ValidationError errors={validationErrors?.course } />
+          }
         </div>
         <div className="mb-3">
           <label htmlFor="applicationType" className="form-label">
@@ -90,11 +115,14 @@ const EnrollmentForm = () => {
             name="applicationType"
             value={formData.applicationType}
             onChange={handleInputChange}
-            required
           >
             <option value="Voluntario">Voluntário</option>
             <option value="Bolsa">Bolsista</option>
           </select>
+          {
+            validationErrors &&
+            <ValidationError errors={validationErrors?.applicationType } />
+          }
         </div>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">
@@ -107,8 +135,11 @@ const EnrollmentForm = () => {
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            required
           />
+          {
+            validationErrors &&
+            <ValidationError errors={validationErrors?.email } />
+          }
         </div>
 
         <div className="mb-3">
@@ -120,9 +151,12 @@ const EnrollmentForm = () => {
             className="form-control"
             id="proofOfEnrollment"
             name="proofOfEnrollment"
-            onChange={handleFileChange}
-            required
+            onChange={handleFileChange} 
           />
+          {
+            validationErrors &&
+            <ValidationError errors={validationErrors?.proofOfEnrollment } />
+          }
         </div>
 
         <div className="mb-3">
@@ -135,8 +169,12 @@ const EnrollmentForm = () => {
             id="projectTheme"
             name="projectTheme"
             onChange={handleFileChange}
-            required
+            
           />
+          {
+            validationErrors &&
+            <ValidationError errors={validationErrors?.projectTheme } />
+          }
         </div>
 
         <button type="submit" className="btn btn-primary">
