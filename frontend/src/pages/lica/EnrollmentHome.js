@@ -1,12 +1,37 @@
 import EnrollmentForm from "./EnrollmentForm";
+import { useState, useEffect } from 'react';
+import { useParams, useNavigate  } from 'react-router-dom';
+import pageApi from "../../services/page";
 
 const EnrollmentHome = () => {
+
+    let { id } = useParams();
+    const [selectionProcess, setSelectionProcess] = useState([]);
+    
+    const navigate = useNavigate();
+
+    useEffect(() => {
+
+        if (!id){
+            return;
+        }
+
+        pageApi 
+        .getSelectionProcesses(id)
+        .then(response=> setSelectionProcess(response.data))
+        .catch((err) => {
+            setSelectionProcess([]);
+            // console.error("ops! ocorreu um erro" + err);
+            navigate('/404');
+        })
+    }, []);
+    console.log(selectionProcess)
     return (
     <>
         <h4>
-            Projeto de Pesquisa: Detecção de COVID-19 em Imagens de Raio-X utilizando Inteligência Computacional
+            {selectionProcess?.title}
         </h4>
-        <p>Este projeto tem como objetivo aplicar técnicas de inteligência computacional para o desenvolvimento de um sistema capaz de detectar a presença do COVID-19 em imagens de raio-X. Através da análise automatizada de radiografias torácicas, almejamos contribuir para o diagnóstico precoce e preciso da doença, agilizando o processo de triagem e auxiliando os profissionais de saúde no enfrentamento da pandemia. <a href ='' >Saiba mais...</a>
+        <p> {selectionProcess?.description}. <a href ='' >Saiba mais...</a>
         </p>
         <br/>
         <EnrollmentForm />

@@ -18,11 +18,12 @@ const App = () => {
         <div className="pb-5"></div>
         <Routes>
           <Route path='*' element={<PageNotFound />} />
+          <Route path='/404' element={<PageNotFound />} />
           <Route path="/" element={<Home />} />
           <Route path="ensino/:slug" element={<Education />} />
           <Route path="lica/sobre" element={<LicaPage  />} />
           <Route path="lica/inscricoes" element={<ProjectSubscriptions  />} />
-          <Route path="lica/inscricao/projeto-1" element={<EnrollmentHome  />} />
+          <Route path="lica/inscricao/projeto/:id" element={<EnrollmentHome  />} />
         </Routes>
       </Container>
       <Footer />
