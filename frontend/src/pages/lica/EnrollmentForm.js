@@ -34,12 +34,11 @@ const EnrollmentForm = ({handleSubmit}) => {
 
     try {
       // Call the handleSubmit function and handle validation errors if any
-      const response = await handleSubmit(formData);
-      console.log(response);
+      await handleSubmit(formData);
+      setValidationErrors([]);
     } catch (error) {
       if (error.response && error.response.status === 400 && error.response.data.validationErrors) {
         setValidationErrors(error.response.data.validationErrors);
-        console.log('validationErrors:', validationErrors)
       } else {
         // Handle other errors (e.g., server error)
         console.error('Error submitting form:', error);
