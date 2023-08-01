@@ -24,11 +24,16 @@ const ProjectList = ({projectsData}) => {
       {projectsData.map((project) => (
         <div key={project.id} style={projectStyle}>
           <h2>{project.title}</h2>
-          <p>{project.description}</p>
-          <p>Incrições de  {formatDate(project?.startDate)} até  {formatDate(project?.endDate)} </p>
-           <Link to={`/lica/inscricao/projeto/${project.id}`} >
-            Inscreva-se
-            </Link>
+          <p>{project.summary}</p>
+          <p>Inscrições de  {formatDate(project?.startDate)} até  {formatDate(project?.endDate)} </p>
+           {
+             project?.openEnrollment && 
+             <Link to={`/lica/inscricao/projeto/${project.id}`} >
+              Inscreva-se
+              </Link>
+           }
+           
+           
         </div>
       ))}
     </div>

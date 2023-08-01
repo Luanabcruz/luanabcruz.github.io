@@ -2,6 +2,7 @@ import EnrollmentForm from "./EnrollmentForm";
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate  } from 'react-router-dom';
 import pageApi from "../../services/page";
+import RenderHtml from "../education/parts/render_html";
 
 const EnrollmentHome = () => {
 
@@ -41,10 +42,11 @@ const EnrollmentHome = () => {
         <h4>
             {selectionProcess?.title}
         </h4>
-        <p> {selectionProcess?.description}. <a href ='' >Saiba mais...</a>
-        </p>
-        <br/>
-        <EnrollmentForm handleSubmit = {handleSave}/>
+        <div dangerouslySetInnerHTML={ {__html: selectionProcess?.description }} />
+        {
+            selectionProcess.openEnrollment && <EnrollmentForm handleSubmit = {handleSave}/>
+        }
+        
         <br/>
         <br/>
     </>
