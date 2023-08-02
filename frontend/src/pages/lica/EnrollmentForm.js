@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ValidationError from '../../components/ValidationError';
 
-const EnrollmentForm = ({handleSubmit}) => {
+const EnrollmentForm = ({ handleSubmit }) => {
   const [formData, setFormData] = useState({
     fullName: '',
     ufcaEnrollmentCode: '',
@@ -9,6 +9,21 @@ const EnrollmentForm = ({handleSubmit}) => {
     proofOfEnrollment: null,
     projectTheme: null,
   });
+
+  const [successAlert, setSuccessAlert] = useState(false);
+  const [errorAlert, setErrorAlert] = useState(false);
+
+  const courses = [
+    { value: '', label: '-- Selecione um curso --' },
+    { value: 'matematica_computacional', label: 'Matemática Computacional' },
+    { value: 'ciencia_computacao', label: 'Ciência da Computação' },
+  ];
+
+  const applicationTypes = [
+    { value: '', label: '-- Selecione um tipo --' },
+    { value: 'volunteer', label: 'Voluntário' },
+    { value: 'scholarship', label: 'Bolsista' }
+  ];
 
   const [validationErrors, setValidationErrors] = useState(null); // State to store validation errors
 
@@ -35,8 +50,21 @@ const EnrollmentForm = ({handleSubmit}) => {
     try {
       // Call the handleSubmit function and handle validation errors if any
       await handleSubmit(formData);
+      setSuccessAlert(true);
+      setErrorAlert(false);
+      setFormData({
+        fullName: '',
+        ufcaEnrollmentCode: '',
+        course: '',
+        applicationType: '',
+        email: '',
+      });
       setValidationErrors([]);
     } catch (error) {
+      
+      setErrorAlert(true);
+      setSuccessAlert(false);
+
       if (error.response && error.response.status === 400 && error.response.data.validationErrors) {
         setValidationErrors(error.response.data.validationErrors);
       } else {
@@ -49,6 +77,18 @@ const EnrollmentForm = ({handleSubmit}) => {
   return (
     <div className="container">
       <h2>Formulário de Inscrição</h2>
+      {successAlert && (
+        <div className="alert alert-success" role="alert">
+          Seu formulário foi enviado com sucesso!
+        </div>
+      )}
+      
+      {errorAlert && (
+        <div className="alert alert-danger" role="alert">
+          Houve um erro ao enviar o formulário. Por favor, tente novamente.
+        </div>
+      )}
+
       <form onSubmit={onSubmit}>
         <div className="mb-3">
           <label htmlFor="fullName" className="form-label">
@@ -64,14 +104,14 @@ const EnrollmentForm = ({handleSubmit}) => {
           />
           {
             validationErrors &&
-            <ValidationError errors={validationErrors?.fullName } />
+            <ValidationError errors={validationErrors?.fullName} />
           }
         </div>
 
         <div className="mb-3">
           <label htmlFor="ufcaEnrollmentCode" className="form-label">
             Matrícula
-          </label>  
+          </label>
           <input
             type="text"
             className="form-control"
@@ -82,7 +122,7 @@ const EnrollmentForm = ({handleSubmit}) => {
           />
           {
             validationErrors &&
-            <ValidationError errors={validationErrors?.ufcaEnrollmentCode } />
+            <ValidationError errors={validationErrors?.ufcaEnrollmentCode} />
           }
         </div>
         <div className="mb-3">
@@ -96,12 +136,15 @@ const EnrollmentForm = ({handleSubmit}) => {
             value={formData.course}
             onChange={handleInputChange}
           >
-            <option value="Matemática Computacional">Matemática Computacional</option>
-            <option value="Ciência da Computação">Ciência da Computação</option>
+            {courses.map((course) => (
+              <option key={course.value} value={course.value}>
+                {course.label}
+              </option>
+            ))}
           </select>
           {
             validationErrors &&
-            <ValidationError errors={validationErrors?.course } />
+            <ValidationError errors={validationErrors?.course} />
           }
         </div>
         <div className="mb-3">
@@ -115,12 +158,15 @@ const EnrollmentForm = ({handleSubmit}) => {
             value={formData.applicationType}
             onChange={handleInputChange}
           >
-            <option value="Voluntario">Voluntário</option>
-            <option value="Bolsa">Bolsista</option>
+            {applicationTypes.map((type) => (
+              <option key={type.value} value={type.value}>
+                {type.label}
+              </option>
+            ))}
           </select>
           {
             validationErrors &&
-            <ValidationError errors={validationErrors?.applicationType } />
+            <ValidationError errors={validationErrors?.applicationType} />
           }
         </div>
         <div className="mb-3">
@@ -137,7 +183,7 @@ const EnrollmentForm = ({handleSubmit}) => {
           />
           {
             validationErrors &&
-            <ValidationError errors={validationErrors?.email } />
+            <ValidationError errors={validationErrors?.email} />
           }
         </div>
 
@@ -150,11 +196,11 @@ const EnrollmentForm = ({handleSubmit}) => {
             className="form-control"
             id="proofOfEnrollment"
             name="proofOfEnrollment"
-            onChange={handleFileChange} 
+            onChange={handleFileChange}
           />
           {
             validationErrors &&
-            <ValidationError errors={validationErrors?.proofOfEnrollment } />
+            <ValidationError errors={validationErrors?.proofOfEnrollment} />
           }
         </div>
 
@@ -168,11 +214,11 @@ const EnrollmentForm = ({handleSubmit}) => {
             id="projectTheme"
             name="projectTheme"
             onChange={handleFileChange}
-            
+
           />
           {
             validationErrors &&
-            <ValidationError errors={validationErrors?.projectTheme } />
+            <ValidationError errors={validationErrors?.projectTheme} />
           }
         </div>
 
