@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import EnrollmentForm from './EnrollmentForm';
 import EnrollmentProof from './EnrollmentProof';
+import Loader from '../../components/Loader';
 
 const Enrollment = ({ handleSubmit }) => {
 
+  const [isLoading, setLoading] = useState(false); // Estado para controlar o loader
   const [successAlert, setSuccessAlert] = useState(false);
   const [errorAlert, setErrorAlert] = useState(false);
   const [data, setData] = useState({});
@@ -25,11 +27,14 @@ const Enrollment = ({ handleSubmit }) => {
 
   const onSubmit = async (data) => {
     try {
+      setLoading(true); // Inicia o loader quando a submissão é iniciada
+      setSuccessAlert(false);
+      setErrorAlert(false);
       const proofCode = await handleSubmit(data);
-      
+
       setSuccessAlert(true);
       setErrorAlert(false);
-      setProofData({...data, ...{proofCode}});
+      setProofData({ ...data, ...{ proofCode } });
       setData({
         fullName: '',
         ufcaEnrollmentCode: '',
@@ -51,12 +56,14 @@ const Enrollment = ({ handleSubmit }) => {
         setErrorAlert('Um erro interno aconteceu');
         console.error('Error submitting form:', error);
       }
+    } finally {
+      setLoading(false); // Para o loader independentemente da resposta (sucesso ou erro)
     }
   };
 
   return (
     <div className="container">
-      <h2>Formulário de Inscrição</h2>
+      <h2 className="pb-4">Formulário de Inscrição</h2>
       {successAlert && (
         <div className="alert alert-success" role="alert">
           Seu formulário foi enviado com sucesso!
@@ -69,20 +76,27 @@ const Enrollment = ({ handleSubmit }) => {
         </div>
       )}
 
-      {
-        successAlert ?
+      {/* Mostrar o loader enquanto isLoading é true */}
+      {isLoading ? (
+        <div style={{paddingTop: '40px'}} >
+          <Loader text={'Enviando...'} />
+        </div>
+
+      ) : (
+        successAlert ? (
           <EnrollmentProof
-            data={proofData} /> :
-          (<EnrollmentForm
+            data={proofData} />
+        ) : (
+          <EnrollmentForm
             onSubmit={onSubmit}
             formData={data}
             setFormData={setData}
             validationErrors={validationErrors}
             courses={courses}
             applicationTypes={applicationTypes}
-          />)
-      }
-
+          />
+        )
+      )}
     </div>
   );
 };
