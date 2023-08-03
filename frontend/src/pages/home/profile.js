@@ -11,7 +11,9 @@ const Profile = () => {
                 <h3>Luana Batista</h3>
                 <div className="profile-details" style={{ display: 'flex', alignItems: 'stretch', flexDirection: 'column' }}>
                     <span style={{ fontWeight: '500', fontSize: '1.2em' }}>Universidade Federal do Cariri (UFCA)</span>
-                    <span>Centro de Ciências e Tecnologia (CCT) - Bloco A, Sala 05</span>
+                    <span>Avenida Tenente Raimundo Rocha, 1639</span>
+                    <span>Bairro Cidade Universitária, Juazeiro do Norte - Ceará</span>
+                    <span>Centro de Ciências e Tecnologia (CCT) - Bloco A, Sala 05</span>
                     <div className="profile-contact pt-3"  style={{ display: 'flex', alignItems: 'stretch', justifyContent:'space-around', maxWidth:'120px'}}>
                         <a style={{ textDecoration: 'none' }} href="mailto: luana.batista@ufca.edu.br" target='_blank'  rel="noreferrer">
                             <Envelope  className="ml-4"  color="black" size={24}/>
