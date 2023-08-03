@@ -125,7 +125,7 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
 
       <div className="mb-3">
         <label htmlFor="proofOfEnrollment" className="form-label">
-          Comprovante de matrícula (PDF)
+          Histórico escolar (PDF)
         </label>
         <input
           type="file"

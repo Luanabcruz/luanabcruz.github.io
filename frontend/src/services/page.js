@@ -16,7 +16,11 @@ const pageApi = {
     getDiscipline:(slug) => apiExternal.get(`api/discipline/${slug}`),
     listSelectionProcesses:() => apiExternal.get(`api/selection-processes`),
     getSelectionProcesses: (id) => apiExternal.get(`api/selection-process/${id}`),
-    submitSelectionProcesses: (id, data) => apiExternal.post(`api/selection-process/${id}/submit`, data)
+    submitSelectionProcesses: (id, data) => apiExternal.post(`api/selection-process/${id}/submit`, data, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+    })
 }
 
 export default pageApi;
