@@ -55,6 +55,7 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
           name="ufcaEnrollmentCode"
           value={formData.ufcaEnrollmentCode}
           onChange={handleInputChange}
+          required
         />
         {
           validationErrors &&
@@ -71,6 +72,7 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
           name="course"
           value={formData.course}
           onChange={handleInputChange}
+          required
         >
           {courses.map((course) => (
             <option key={course.value} value={course.value}>
@@ -93,6 +95,7 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
           name="applicationType"
           value={formData.applicationType}
           onChange={handleInputChange}
+          required
         >
           {applicationTypes.map((type) => (
             <option key={type.value} value={type.value}>
@@ -116,6 +119,7 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
           name="email"
           value={formData.email}
           onChange={handleInputChange}
+          required
         />
         {
           validationErrors &&
@@ -133,6 +137,7 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
           id="proofOfEnrollment"
           name="proofOfEnrollment"
           onChange={handleFileChange}
+          required
         />
         {
           validationErrors &&
@@ -150,7 +155,7 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
           id="projectTheme"
           name="projectTheme"
           onChange={handleFileChange}
-
+          required
         />
         {
           validationErrors &&
