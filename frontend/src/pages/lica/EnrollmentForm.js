@@ -13,9 +13,24 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
 
   const handleFileChange = (event) => {
     const { name, files } = event.target;
+    const selectedFile = files[0];
+    
+    const maxSizeInBytes = 20 * 1024 * 1024;
+    if (selectedFile.size > maxSizeInBytes) {
+      alert('O tamanho do arquivo deve ser no máximo 20 MB.');
+      return;
+    }
+
+    // Validar o tipo de arquivo (apenas PDF neste exemplo)
+    if (selectedFile.type !== 'application/pdf') {
+      alert('O arquivo deve ser do tipo PDF.');
+      return;
+    }
+    console.log('aki', name, selectedFile.type)
+    
     setFormData({
       ...formData,
-      [name]: files[0],
+      [name]: selectedFile,
     });
   };
 
@@ -36,7 +51,8 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
           id="fullName"
           name="fullName"
           value={formData.fullName}
-          onChange={handleInputChange}
+          onChange={handleInputChange} 
+          required
         />
         {
           validationErrors &&
@@ -55,6 +71,8 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
           name="ufcaEnrollmentCode"
           value={formData.ufcaEnrollmentCode}
           onChange={handleInputChange}
+          pattern=".{10}"
+          title="A matrícula deve conter exatamente 10 caracteres."
           required
         />
         {
@@ -137,6 +155,7 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
           id="proofOfEnrollment"
           name="proofOfEnrollment"
           onChange={handleFileChange}
+          accept="application/pdf"
           required
         />
         {
@@ -155,6 +174,7 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
           id="projectTheme"
           name="projectTheme"
           onChange={handleFileChange}
+          accept="application/pdf"
           required
         />
         {
