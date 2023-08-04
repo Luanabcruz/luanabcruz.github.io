@@ -19,7 +19,7 @@ const ProjectSubscriptions = ({ data }) => {
 
     return (
         <>
-            <h3>Inscrições em aberto</h3>
+            <h2>Inscrições em aberto</h2>
             <br />
             <ProjectList projectsData={projectsData}/>
         </>

@@ -23,8 +23,9 @@ const ProjectList = ({projectsData}) => {
     <div>
       {projectsData.map((project) => (
         <div key={project.id} style={projectStyle}>
-          <h2>{project.title}</h2>
-          <p>{project.summary}</p>
+          <h4>{project.title}</h4>
+          
+          <p style={{paddingTop:'10px'}}>{project.summary}</p>
           <p>Inscrições de  {formatDate(project?.startDate)} até  {formatDate(project?.endDate)} </p>
            {
              project?.openEnrollment && 

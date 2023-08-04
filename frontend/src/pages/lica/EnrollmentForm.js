@@ -26,8 +26,7 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
       alert('O arquivo deve ser do tipo PDF.');
       return;
     }
-    console.log('aki', name, selectedFile.type)
-    
+        
     setFormData({
       ...formData,
       [name]: selectedFile,
@@ -41,9 +40,9 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="mb-3">
+      <div className="mb-3 mt-3">
         <label htmlFor="fullName" className="form-label">
-          Nome completo
+          Nome completo<span className='text-danger'>*</span>
         </label>
         <input
           type="text"
@@ -62,7 +61,7 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
 
       <div className="mb-3">
         <label htmlFor="ufcaEnrollmentCode" className="form-label">
-          Matrícula
+          Matrícula<span className='text-danger'>*</span>
         </label>
         <input
           type="text"
@@ -82,7 +81,7 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
       </div>
       <div className="mb-3">
         <label htmlFor="course" className="form-label">
-          Curso
+          Curso<span className='text-danger'>*</span>
         </label>
         <select
           className="form-select"
@@ -105,7 +104,7 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
       </div>
       <div className="mb-3">
         <label htmlFor="applicationType" className="form-label">
-          Tipo de inscrição
+          Tipo de inscrição<span className='text-danger'>*</span>
         </label>
         <select
           className="form-select"
@@ -128,7 +127,7 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
       </div>
       <div className="mb-3">
         <label htmlFor="email" className="form-label">
-          E-mail
+          E-mail<span className='text-danger'>*</span>
         </label>
         <input
           type="email"
@@ -147,7 +146,7 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
 
       <div className="mb-3">
         <label htmlFor="proofOfEnrollment" className="form-label">
-          Histórico escolar (PDF)
+          Histórico escolar (PDF)<span className='text-danger'>*</span>
         </label>
         <input
           type="file"
@@ -166,7 +165,7 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
 
       <div className="mb-3">
         <label htmlFor="projectTheme" className="form-label">
-          Projeto (PDF)
+          Projeto (PDF)<span className='text-danger'>*</span>
         </label>
         <input
           type="file"
@@ -182,7 +181,7 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
           <ValidationError errors={validationErrors?.projectTheme} />
         }
       </div>
-
+        <br/>
       <button type="submit" className="btn btn-primary">
         Enviar inscrição
       </button>

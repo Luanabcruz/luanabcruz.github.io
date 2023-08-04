@@ -12,7 +12,7 @@ const imgStyle = {
 };
 
 const LicaPage = () => {
-    const imgUrl = `${process.env.PUBLIC_URL}/logo_lica_no_background.png`
+  const imgUrl = `${process.env.PUBLIC_URL}/logo_lica_no_background.png`
 
   return (
     <div className="container">
@@ -20,17 +20,17 @@ const LicaPage = () => {
         <div className="col-md-6">
           <div style={containerStyle}>
             <img src={imgUrl} alt="LICA" style={imgStyle} />
-            
+
           </div>
         </div>
         <div className="col-md-6">
-        <div style={{ textAlign: 'justify', marginTop: '35px' }}>
-              <p>O Laboratório de Inteligência Computacional Aplicada <b>(LICA)</b> é um centro de pesquisa que tem como objetivo aplicar técnicas de inteligência artificial, como aprendizado de máquina, processamento de linguagem natural e visão computacional para solucionar problemas em diferentes áreas, como medicina, finanças, logística e automação industrial. 
-              </p>
-              <p>
+          <div style={{ textAlign: 'justify', marginTop: '35px' }}>
+            <p>O Laboratório de Inteligência Computacional Aplicada <b>(LICA)</b> é um centro de pesquisa que tem como objetivo aplicar técnicas de inteligência artificial, como aprendizado de máquina, processamento de linguagem natural e visão computacional para solucionar problemas em diferentes áreas, como medicina, finanças, logística e automação industrial.
+            </p>
+            <p>
               Para realizar as pesquisas e desenvolver soluções inteligentes e personalizadas, o LICA conta com uma equipe formada por alunos e professores dos cursos de ciência da computação e matemática computacional da Universidade Federal do Cariri <b>(UFCA)</b>.
-              </p>
-            </div>
+            </p>
+          </div>
         </div>
       </div>
       <div className='row'>

@@ -63,7 +63,6 @@ const Enrollment = ({ handleSubmit }) => {
 
   return (
     <div className="container">
-      <h2 className="pb-4">Formulário de Inscrição</h2>
       {successAlert && (
         <div className="alert alert-success" role="alert">
           Seu formulário foi enviado com sucesso!
@@ -78,7 +77,7 @@ const Enrollment = ({ handleSubmit }) => {
 
       {/* Mostrar o loader enquanto isLoading é true */}
       {isLoading ? (
-        <div style={{paddingTop: '40px'}} >
+        <div style={{ paddingTop: '40px' }} >
           <Loader text={'Enviando...'} />
         </div>
 
@@ -87,14 +86,21 @@ const Enrollment = ({ handleSubmit }) => {
           <EnrollmentProof
             data={proofData} />
         ) : (
-          <EnrollmentForm
-            onSubmit={onSubmit}
-            formData={data}
-            setFormData={setData}
-            validationErrors={validationErrors}
-            courses={courses}
-            applicationTypes={applicationTypes}
-          />
+          <div className="card">
+            <div className="card-header">
+              <h5>Formulário de Inscrição</h5>
+            </div>
+            <div className="card-body">
+              <EnrollmentForm
+                onSubmit={onSubmit}
+                formData={data}
+                setFormData={setData}
+                validationErrors={validationErrors}
+                courses={courses}
+                applicationTypes={applicationTypes}
+              />
+            </div>
+          </div>
         )
       )}
     </div>

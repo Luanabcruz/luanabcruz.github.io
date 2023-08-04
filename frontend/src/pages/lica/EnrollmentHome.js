@@ -42,7 +42,7 @@ const EnrollmentHome = () => {
             <h4>
                 {selectionProcess?.title}
             </h4>
-            <div dangerouslySetInnerHTML={{ __html: selectionProcess?.description }} />
+            <div style={{paddingTop:'15px', paddingBottom: '15px'}} dangerouslySetInnerHTML={{ __html: selectionProcess?.description }} />
             {
                 selectionProcess.openEnrollment &&  <Enrollment handleSubmit={handleSave} />
             }
