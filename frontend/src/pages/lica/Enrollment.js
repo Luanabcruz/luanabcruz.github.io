@@ -62,7 +62,7 @@ const Enrollment = ({ handleSubmit }) => {
   };
 
   return (
-    <div className="container">
+    <div className="">
       {successAlert && (
         <div className="alert alert-success" role="alert">
           Seu formulário foi enviado com sucesso!
