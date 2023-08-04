@@ -14,7 +14,7 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
   const handleFileChange = (event) => {
     const { name, files } = event.target;
     const selectedFile = files[0];
-    
+
     const maxSizeInBytes = 20 * 1024 * 1024;
     if (selectedFile.size > maxSizeInBytes) {
       alert('O tamanho do arquivo deve ser no máximo 20 MB.');
@@ -26,7 +26,7 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
       alert('O arquivo deve ser do tipo PDF.');
       return;
     }
-        
+
     setFormData({
       ...formData,
       [name]: selectedFile,
@@ -50,9 +50,10 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
           id="fullName"
           name="fullName"
           value={formData.fullName}
-          onChange={handleInputChange} 
+          onChange={handleInputChange}
           required
-        />
+        >
+        </input>
         {
           validationErrors &&
           <ValidationError errors={validationErrors?.fullName} />
@@ -73,7 +74,8 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
           pattern=".{10}"
           title="A matrícula deve conter exatamente 10 caracteres."
           required
-        />
+        >
+        </input>
         {
           validationErrors &&
           <ValidationError errors={validationErrors?.ufcaEnrollmentCode} />
@@ -137,7 +139,8 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
           value={formData.email}
           onChange={handleInputChange}
           required
-        />
+        >
+        </input>
         {
           validationErrors &&
           <ValidationError errors={validationErrors?.email} />
@@ -156,7 +159,8 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
           onChange={handleFileChange}
           accept="application/pdf"
           required
-        />
+        >
+        </input>
         {
           validationErrors &&
           <ValidationError errors={validationErrors?.proofOfEnrollment} />
@@ -175,13 +179,14 @@ const EnrollmentForm = ({ onSubmit, formData, setFormData, courses, applicationT
           onChange={handleFileChange}
           accept="application/pdf"
           required
-        />
+        >
+        </input>
         {
           validationErrors &&
           <ValidationError errors={validationErrors?.projectTheme} />
         }
       </div>
-        <br/>
+      <br />
       <button type="submit" className="btn btn-primary">
         Enviar inscrição
       </button>
