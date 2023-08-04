@@ -5,8 +5,8 @@ const api = axios.create({
 });
 
 const apiExternal = axios.create({
-    // baseURL: `https://api.moonapp.com.br/`,
-    baseURL: `http://localhost:8000/`,
+    baseURL: `https://api.moonapp.com.br/`,
+    // baseURL: `http://localhost:8000/`,
 });
 
 const pageApi = {
