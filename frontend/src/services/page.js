@@ -4,7 +4,7 @@ const api = axios.create({
     baseURL: `${process.env.PUBLIC_URL}/data`,
 });
 
-const isProduction = window.location.hostname === 'luanabcruz.github.io/'; // Verifica o domínio de produção
+const isProduction = window.location.hostname === 'luanabcruz.github.io'; // Verifica o domínio de produção
 
 const apiExternal = axios.create({
     baseURL: isProduction ? 'https://api.moonapp.com.br/' : 'http://localhost:8000/',
