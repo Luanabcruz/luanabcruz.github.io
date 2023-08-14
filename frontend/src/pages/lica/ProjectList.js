@@ -28,9 +28,9 @@ const ProjectList = ({projectsData}) => {
           <p style={{paddingTop:'10px'}}>{project.summary}</p>
           <p>Inscrições de  {formatDate(project?.startDate)} até  {formatDate(project?.endDate)} </p>
            {
-             project?.openEnrollment && 
+              
              <Link to={`/lica/inscricao/projeto/${project.id}`} >
-              Inscreva-se
+              { project?.openEnrollment ? 'Inscreva-se' : 'Ver mais'}
               </Link>
            }
            
